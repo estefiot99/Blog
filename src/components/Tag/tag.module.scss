@@ -1,0 +1,11 @@
+@import "@/styles/variables.scss";
+
+.tag {
+  background-color: var(--accent-color);
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: $bg-color;
+}

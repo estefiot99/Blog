@@ -1,0 +1,70 @@
+@import "@/styles/variables.scss";
+
+.navbar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.5s ease;
+  position: fixed;
+
+  .menu {
+    width: 100%;
+    display: flex;
+    max-width: 1400px;
+    padding: 28px 40px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      background: none;
+      border: 1px;
+      position: relative;
+
+      .light {
+        opacity: 0;
+        &.active {
+          opacity: 1;
+        }
+      }
+
+      .dark {
+        opacity: 0;
+        &.active {
+          opacity: 1;
+        }
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.5s ease;
+      }
+    }
+    :hover {
+      cursor: pointer;
+    }
+
+    ul {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.dark.navbar {
+  background-color: $text-body;
+  color: #faf7f0;
+
+  svg {
+    color: #faf7f0;
+  }
+}

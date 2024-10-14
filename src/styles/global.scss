@@ -1,0 +1,114 @@
+@import "./variables.scss";
+
+:root {
+  --bg-color: #{$bg-color};
+  --bg-color-alt: #{$bg-color-alt};
+  --accent-color: #{$accent-color};
+  --text-title: #{$text-title};
+  --text-body: #{$text-body};
+}
+
+.dark-theme {
+  --bg-color: #{$dark-bg-color};
+  --bg-color-alt: #{$dark-bg-color-alt};
+  --accent-color: #{$dark-accent-color};
+  --text-title: #{$dark-text-title};
+  --text-body: #{$dark-text-body};
+}
+
+.light-theme {
+  --bg-color: #{$bg-color};
+  --bg-color-alt: #{$bg-color-alt};
+  --accent-color: #{$accent-color};
+  --text-title: #{$text-title};
+  --text-body: #{$text-body};
+}
+
+body {
+  color: var(--text-body);
+  font-family: "Rubik";
+  margin: 0;
+  transition: all 0.5s ease;
+}
+
+.layout {
+  color: var(--text-body);
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0px 40px;
+  margin: auto;
+}
+
+h1,
+h2 {
+  color: var(--text-title);
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p {
+  margin: 0;
+}
+
+.layout .content {
+  padding-top: 80px;
+}
+
+.secondary-bg {
+  background-color: var(--bg-color-alt);
+}
+
+.home {
+  background-color: var(--bg-color);
+
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6%;
+    font-family: var(--text-title);
+    padding: 80px 0;
+
+    .hero-image {
+      width: 50%;
+      min-height: 60vh;
+      max-height: 560px;
+      background-color: #eee;
+      border-radius: 20px;
+    }
+
+    .hero-description {
+      h1 {
+        margin-top: 0;
+        margin-bottom: 6px;
+      }
+
+      .subtitle {
+        font-weight: 100;
+        font-style: italic;
+        margin-bottom: 16px;
+      }
+
+      padding-right: 40px;
+      width: 50%;
+    }
+  }
+
+  .articles {
+    padding-top: 64px;
+    padding-bottom: 112px;
+  }
+}
