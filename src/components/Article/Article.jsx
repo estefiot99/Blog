@@ -1,17 +1,19 @@
 import React from 'react'
 import Tag from '../Tag/Tag';
 import styles from "./article.module.scss";
-
-function Article() {
+import { useRouter } from 'next/navigation'
+function Article({ post }) {
+    const router = useRouter()
     return (
-        <div className={styles.article}>
-            <div className={styles.image}></div>
+        <div className={styles.article} key={`post-${post.id}`} onClick={() => router.push(`/blog/${post.id}`)}>
+            <div className={styles.image} style={{ backgroundImage: `url(${post.imageUrl})` }}></div>
             <div className={styles.tags}>
-                <Tag label={"Label"} />
-                <Tag label={"Label"} />
+                {post.categories.map((category) => (
+                    <Tag label={category} />
+                ))}
             </div>
-            <h4>The Power of Minimalism in Web Design</h4>
-            <p>In an age where attention spans are shrinking, less is truly more. Minimalist web design has become a key trend, allowing brands to communicate their message clearly without overwhelming users.</p>
+            <h4>{post.title}</h4>
+            <p>{post.summary}</p>
         </div>
     )
 }

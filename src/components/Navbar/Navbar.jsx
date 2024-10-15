@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
 import { LucideSunMedium, LucideMoon } from 'lucide-react'
-import { Route } from 'react-router-dom'
 import styles from "./navbar.module.scss";
 import { ThemeContext } from '@/context/ThemeContext'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
 function Navbar() {

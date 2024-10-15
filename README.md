@@ -1,18 +1,19 @@
-Next.js Portfolio and Blog App
-A simple personal portfolio and blog app built using Next.js, SASS, and Context API for theme management.
+# Next.js Portfolio and Blog App
 
-Features
-Single-page application (SPA) with navigation between Home, About Us, and Blog sections.
-Light and Dark theme toggle using the Context API.
-Responsive design using custom SASS styling.
-Blog posts fetched from a mock API.
+A simple personal portfolio and blog app built using Next.js, SASS, and Context API.
 
-Installation
+## Installation
 
-Install dependencies:
-npm install
+Install and runmo-blog with npm
 
-Run the development server:
-npm run dev
+```bash
+  npm install
+  npm run start
+```
 
 Open your browser and visit http://localhost:3000.
+
+## Documentation
+
+[Design](https://linktodocumentation)\
+[Video](https://linktodocumentation)

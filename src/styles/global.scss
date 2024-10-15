@@ -88,6 +88,8 @@ p {
       max-height: 560px;
       background-color: #eee;
       border-radius: 20px;
+      background-size: cover;
+      background-position: center;
     }
 
     .hero-description {
@@ -110,5 +112,181 @@ p {
   .articles {
     padding-top: 64px;
     padding-bottom: 112px;
+  }
+}
+
+.blog {
+  background-color: var(--bg-color);
+
+  h1 {
+    text-align: center;
+    padding: 36px 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .articles-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .third {
+      width: 30%;
+      gap: 3%;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.blog-detail {
+  background-color: var(--bg-color);
+
+  .cover-image {
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  p {
+    margin-bottom: 80px;
+    margin-top: 12px;
+  }
+
+  .articles {
+    padding-top: 64px;
+    padding-bottom: 112px;
+  }
+}
+
+.about-us {
+  background-color: var(--bg-color);
+
+  .info {
+    text-align: center;
+  }
+
+  h1 {
+    padding: 36px 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .values {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .articles {
+    margin-top: 80px;
+    padding-top: 64px;
+    padding-bottom: 112px;
+  }
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin: 2px;
+  margin-bottom: 2px !important;
+}
+
+.show-sm {
+  display: none;
+}
+
+.hide-sm {
+  display: block;
+}
+
+@media (max-width: $breakpoint-md) {
+  .show-sm {
+    display: block;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .home {
+    .hero-section {
+      flex-direction: column;
+      padding: 60px 0;
+
+      .hero-image {
+        width: 100%;
+        min-height: 40vh;
+        margin-bottom: 12px;
+      }
+
+      .hero-description {
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+    .articles {
+      padding-top: 44px;
+      padding-bottom: 0;
+    }
+  }
+
+  .about-us {
+    h1 {
+      padding: 24px 0;
+    }
+
+    .values {
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .articles {
+      margin-top: 60px;
+      padding-top: 44px;
+      padding-bottom: 80px;
+    }
+  }
+
+  .blog-detail .articles {
+    padding-top: 44px;
+    padding-bottom: 0;
+  }
+
+  .blog .articles-list {
+    flex-direction: column;
+
+    .third {
+      width: 100%;
+    }
+  }
+
+  .layout .content {
+    padding-top: 64px;
   }
 }
